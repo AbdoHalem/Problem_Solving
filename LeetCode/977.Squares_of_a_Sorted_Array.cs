@@ -4,8 +4,8 @@ public class Solution {
         // Two Pointers Pattern to swap
         int left = 0, right = nums.Length - 1;
         int index = right;
-        
-        while(right > left){
+
+        while(right >= left){
             if(nums[left] * nums[left] > nums[right] * nums[right]){
                 res[index] = nums[left] * nums[left];
                 left++;
@@ -15,10 +15,6 @@ public class Solution {
                 right--;
             }
             index--;
-        }
-        while(index >= 0){
-            res[index--] = nums[left] * nums[left];
-            left++;
         }
         return res;
     }
